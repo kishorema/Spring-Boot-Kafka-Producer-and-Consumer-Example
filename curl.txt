@@ -1,0 +1,1 @@
+curl -v http://localhost:8080/produce/message -H "Content-Type: application/json" -d "{\"id\": 286517, \"name\": \"kishore\", \"rollNumber\": \"D581418\"}"

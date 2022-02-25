@@ -1,0 +1,22 @@
+start zookeeper:
+E:\kafka_2_13_3_1_0\bin\windows>zookeeper-server-start.bat ../../config/zookeeper.properties
+
+start kafka server:
+
+E:\kafka_2_13_3_1_0\bin\windows>kafka-server-start.bat ../../config/server.properties
+
+
+create a topic:
+
+E:\kafka_2_13_3_1_0\bin\windows>kafka-topics.bat --create --bootstrap-server localhost:9092 --replication-factor 1 --partitions 1 --topic test
+
+send message:
+
+E:\kafka_2_13_3_1_0\bin\windows>kafka-console-producer.bat --broker-list localhost:9092 --topic test
+
+receive message:
+
+E:\kafka_2_13_3_1_0\bin\windows>kafka-console-consumer.bat --bootstrap-server localhost:9092 --topic test --from-beginning
+
+E:\kafka_2_13_3_1_0\bin\windows>kafka-console-consumer.bat --bootstrap-server localhost:9092 --topic netsurfingzone-topic-1 --from-beginning
+
